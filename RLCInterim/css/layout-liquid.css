@@ -1,0 +1,247 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+/*
+ * Body
+ */
+body {
+}
+
+#page-wrapper,
+.region-bottom {
+  width: 960px; /* Don't allow the browser to make the site unreadable. */ /*min-width changed to width to create gray space around centre white section */
+  margin: auto; /* centers white background on grey backer */
+  margin-top: 1.5em;
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+.front #header .section {
+  padding: 2em 0 3em 2em;
+}
+
+.region-header {
+}
+
+#logo img {
+  width: 85%;
+  }
+
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+  min-height: 40em;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+#content .section,
+.no-sidebars #content .section {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb {
+  float:left;
+  }
+
+.sidebar-first #content .section {
+  padding-left: 250px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
+  padding-right: 0; /* LTR */
+}
+
+.sidebar-second #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 250px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+.two-sidebars #content .section {
+  padding-left: 250px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 250px; /* The width + right margin of .region-sidebar-second. */
+}
+
+/*
+ * Navigation
+ */
+#navigation { /* styling removed as not used by Sandbox1 */
+}
+
+
+
+/*
+ * First sidebar
+ */
+
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 250px;
+  margin-left: 0; /* LTR */
+  margin-right: -250px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  margin: 0 0 0 0; /* LTR */
+  padding: 0em 3em;
+}
+
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: right; /* LTR */
+  width: 250px;
+  margin-left: -250px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0em 3em;
+}
+
+
+#block-search-form {
+}
+
+/*
+ * Footer - Sandbox1 contains contact details, sitemap link and link to privacy policy
+ */
+.region-footer {
+  text-align: center;
+}
+
+.region-footer .content p {
+  margin: 0;
+  padding: 0;
+  }
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+               /* Sandbox1 styling for login form held in forms.css */
+
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word;
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+/*
+ * Styling for quality marks grid
+ */
+
+#block-block-4 {
+  position: absolute;  /* positions the qualmarks grid at the bottom of the sidebar-first div */
+  bottom: 0;
+  margin: 0 0 5px 0;   /* creates a box with height 140px to keep with vertical tempo */
+  }
+
+#legal500 {
+  margin: 0 15px 0 0;
+  }
+
+#chambersuk {
+  vertical-align: top;
+  }
+
+#barmark {
+  margin: 0 32px 0 0;
+  }
+
+#cdslogo {
+  }
+
+
+/* Barrister specific page CSS */
+.field {
+
+}
+
+/* Frontpage specific CSS */
+
+.front .region-sidebar-second {
+  width: 465px;
+  margin-left: -465px;
+  margin-top: -120px;
+  padding: 0;
+  }
+
+.front .region-sidebar-second .section {
+  padding: 0;
+  margin: 0;
+  }
+
+.front #content .section {
+  padding-left: 230px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 485px; /* The width + right margin of .region-sidebar-second. */
+  }
+
+

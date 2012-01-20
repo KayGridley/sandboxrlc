@@ -1,0 +1,107 @@
+/**
+ * @file
+ * Field Styling
+ */
+
+
+.field /* Wrapper for any field. */ {
+  margin: 0em 0em 1.667em 0em;  /* preserves vertical tempo of lambda = 20px */
+
+}
+
+/*
+ * Field types (Core)
+ */
+.field-type-text {
+}
+
+.field-type-text-long {
+}
+
+.field-type-text-with-summary {
+}
+
+.field-type-image {
+}
+
+.field-type-file {
+}
+
+.field-type-taxonomy-term-reference {
+}
+
+.field-type-number-integer {
+}
+
+.field-type-number-decimal {
+}
+
+.field-type-number-float {
+}
+
+.field-type-list-text {
+}
+
+.field-type-list-boolean {
+}
+
+.field-type-list-integer {
+}
+
+.field-type-list-float {
+}
+
+/*
+ * Field types (Contrib)
+ */
+.field-type-datetime /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */ {
+}
+
+.field-type-node-reference {
+}
+
+.field-type-user-reference {
+}
+
+
+/*
+ * Named fields
+ */
+.field-name-body {
+}
+
+.field-name-field-image {
+}
+
+.field-name-field-tags {
+}
+
+.field-name-field-FIELDNAME /* Underscores in field name are replaced with dashes. */ {
+}
+
+/*
+ *
+ */
+
+.field .field-label {
+  font-size: 1.5em;  /* Sets lables in scale with body text - should display as 16px in default */
+  color: #000000;      /* Set darker than usual grey header as smaller font size looks lighter */
+  font-weight: 400;
+  line-height: 1em;
+  padding: 0em 0em 0.286em 0em;
+  }
+
+.field-item {
+  margin: 0em 0em 1.666em 0em;  /* spaces text items apart vertically */
+  }
+
+.field-name-field-specialisms div div,
+.field-name-field-profappt div div,
+.field-name-field-privappt div div,
+.field-name-field-memberships div div {
+  margin: 0;
+  }
+
+.field-item p {
+  margin: 0em 0em 1.667em 0em;
+  }

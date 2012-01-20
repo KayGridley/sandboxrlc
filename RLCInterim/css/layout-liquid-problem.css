@@ -1,0 +1,180 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+/*
+ * Body
+ */
+body {
+}
+
+#page-wrapper,
+.region-bottom {
+  width: 960px; /* Don't allow the browser to make the site unreadable. */ /*min-width changed to width to create gray space around centre white section */
+  margin: auto; /* centers white background on grey backer */
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+.region-header {
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+#content .section,
+.no-sidebars #content .section {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-first #content .section {
+  padding-left: 200px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
+  padding-right: 0; /* LTR */
+}
+
+.sidebar-second #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+.two-sidebars #content .section {
+  padding-left: 200px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
+}
+
+/*
+ * Navigation
+ */
+
+#navigation { /* styling removed as not used by Sandbox1 */
+}
+
+
+/*
+ * First sidebar
+ */
+
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 200px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  margin: 0 20px 0 0; /* LTR */
+  padding: 3em 0em 0em 0em;
+}
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: right; /* LTR */
+  width: 200px;
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+#block-tagadelic-1 div.content {  /* Sandbox1 layout for tagadelic wordcloud */
+  padding: 4.2em 0.5em 3em 0em;
+}
+
+#block-search-form { /* Sandbox1 layout for search form */
+}
+
+/*
+ * Footer - Sandbox1 contains contact details, sitemap link and link to privacy policy
+ */
+.region-footer {
+}
+
+/*
+ * Page bottom - Sandbox1 contains Login form/User menu
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+               /* Sandbox1 styling for login form held in forms.css */
+
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+/*  word-wrap: break-word;  A very nice CSS3 property, shame it breaks validation.  Commented out until W3C fixes the validator */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+
+
+

@@ -1,0 +1,7 @@
+@font-your-face settings
+
+Crimson
+h1, h2, h3, h4, h5, h6, .breadcrumb a, .menu li a:link, .menu li a:visited, .menu li a:hover, .menu li a:active, .printetc, .field-label
+
+Verdana
+#skip-to-nav, #page, #block-system-main-menu div ul li ul li a
